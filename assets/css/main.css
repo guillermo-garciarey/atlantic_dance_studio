@@ -4987,6 +4987,11 @@ body.is-preload #banner .inner {
 .media_element2 .front,
 .media_element2 .back {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
     top: 0;
     left: 0;
     width: 100%;
@@ -4995,6 +5000,17 @@ body.is-preload #banner .inner {
     border-radius: 20px;
     margin: 0; /* Ensure no margin */
     padding: 0; /* Ensure no padding */
+}
+
+.media_element2 .back img {
+    position: absolute;
+    border-radius: 20px;
+    z-index: -10;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    filter: blur(2.5px);
 }
 
 .media_element2 .front img {
@@ -5019,14 +5035,36 @@ body.is-preload #banner .inner {
 }
 
 .media_element2 .back p {
-    font-size: large;
-    font-weight: 800;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: medium;
+    font-weight: 400;
     color: #ffffff;
-    position: absolute;
-    bottom: 10px;
-    left: 30px;
     z-index: 100;
     overflow: hidden;
+}
+
+.media_element2 .back h2 {
+    padding-top: 20px;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ffffff;
+    z-index: 100;
+    overflow: hidden;
+}
+
+a.yt-icon {
+    display: inline-block;
+    color: #cc0000;
+    font-size: 32px; /* Adjust size as needed */
+    text-decoration: none;
+}
+
+a.yt-icon:hover {
+    color: #e30000; /* YouTube red */
+    scale: 1.2;
 }
 
 /* Show the front by default */
@@ -5041,11 +5079,45 @@ body.is-preload #banner .inner {
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
 }
 
 /* Add flip transformation */
 .media_element2.flip .flip-container {
     transform: rotateY(180deg);
+}
+
+.modal {
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* color: #ffffff; */
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+}
+
+.modal h2 {
+    padding-top: 20px;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: black;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.modal p {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: medium;
+    font-weight: 400;
+    color: black;
+    z-index: 100;
+    overflow: hidden;
 }
