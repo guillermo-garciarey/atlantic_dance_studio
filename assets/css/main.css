@@ -39,6 +39,10 @@
     --secondary-950: hsl(193, 69%, 5%);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html,
 body,
 div,
