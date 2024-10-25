@@ -321,4 +321,14 @@
             modal.close(); // Close the modal
         }
     });
+
+    // Select all media elements
+    const mediaElements = document.querySelectorAll(".media_element2");
+
+    // Add click event to each element
+    mediaElements.forEach((element) => {
+        element.addEventListener("click", () => {
+            element.classList.toggle("flip");
+        });
+    });
 })(jQuery);

@@ -4924,17 +4924,6 @@ body.is-preload #banner .inner {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-/* .media_element:first-of-type > img {
-    object-fit: cover;
-    border-radius: 20px;
-    height: 400px;
-    width: 300px;
-    filter: none;
-    cursor: pointer;
-    transition: filter 0.3s linear;
-    scale: 1.05;
-} */
-
 .media_element > p {
     font-size: large;
     font-weight: 800;
@@ -4962,10 +4951,101 @@ body.is-preload #banner .inner {
 }
 
 .media_scroller {
-    overflow: auto; /* Allows scrolling */
-    scrollbar-width: none; /* For Firefox */
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .media_scroller::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, Edge */
+    display: none;
+}
+
+/* Flip Effect */
+.media_element2 {
+    flex-shrink: 0;
+    perspective: 1000px;
+    display: flex; /* Change to inline-flex to line up horizontally */
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+    width: 300px; /* Define width to avoid full-width overlap */
+    height: 400px; /* Define height */
+}
+
+/* Container for flip effect */
+.media_element2 .flip-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform-origin: center; /* Ensure flip happens from the center */
+    margin: 0; /* Reset margin */
+}
+
+/* Define front and back faces */
+.media_element2 .front,
+.media_element2 .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+}
+
+.media_element2 .front img {
+    object-fit: cover;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: filter 0.3s linear;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.media_element2 .front p {
+    font-size: large;
+    font-weight: 800;
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.media_element2 .back p {
+    font-size: large;
+    font-weight: 800;
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Show the front by default */
+.media_element2 .front {
+    transform: rotateY(0deg);
+}
+
+/* Hide the back initially */
+.media_element2 .back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+}
+
+/* Add flip transformation */
+.media_element2.flip .flip-container {
+    transform: rotateY(180deg);
 }
