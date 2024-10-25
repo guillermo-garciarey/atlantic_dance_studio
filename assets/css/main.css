@@ -4771,7 +4771,7 @@ body.is-preload #banner .inner {
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: width 0.9s;
+    transition: width 0.7s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -4803,7 +4803,7 @@ body.is-preload #banner .inner {
     bottom: 0;
     left: 30px;
     opacity: 0;
-    transition: top 0.9s, ease-in opacity 2s;
+    transition: left 1s ease-in, opacity 0.6s ease-in 0.6s;
 }
 
 /* Gradient effect using a pseudo-element */
@@ -4879,10 +4879,11 @@ body.is-preload #banner .inner {
     }
     .teacher_image {
         width: 80%;
+        height: 400px;
     }
     .teacher_image:hover h3 {
         opacity: 1;
-        bottom: 250px;
+        bottom: 190px;
         z-index: 2;
     }
 
