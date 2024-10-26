@@ -331,4 +331,16 @@
             element.classList.toggle("flip");
         });
     });
+
+    // Scroll bar setting
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const scroller = document.querySelector(".media_scroller");
+        const thirdItem = scroller.children[0]; // Get the third item (index 2)
+
+        if (thirdItem) {
+            // Calculate the offsetLeft of the third item and scroll the container
+            scroller.scrollLeft = thirdItem.offsetLeft;
+        }
+    });
 })(jQuery);

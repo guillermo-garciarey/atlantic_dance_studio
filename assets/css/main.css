@@ -4922,9 +4922,9 @@ body.is-preload #banner .inner {
     border-radius: 20px;
     height: 400px;
     width: 300px;
-    filter: grayscale();
+    /* filter: grayscale(); */
     cursor: pointer;
-    transition: filter 0.3s linear;
+    transition: scale 0.3s linear;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -4954,13 +4954,41 @@ body.is-preload #banner .inner {
     );
 }
 
-.media_scroller {
+/* .media_scroller {
     overflow: auto;
     scrollbar-width: none;
+} */
+
+/* .media_scroller::-webkit-scrollbar {
+    display: none;
+} */
+
+/* Full scrollbar container */
+.media_scroller::-webkit-scrollbar {
+    width: 10px; /* Width for vertical scrollbar */
+    height: 8px; /* Height for horizontal scrollbar */
 }
 
-.media_scroller::-webkit-scrollbar {
-    display: none;
+/* Scrollbar track */
+.media_scroller::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Light background color for the track */
+    border-radius: 10px; /* Rounded corners for smooth look */
+}
+
+/* Scrollbar thumb (the part you drag) */
+.media_scroller::-webkit-scrollbar-thumb {
+    background: #888; /* Darker color for the thumb */
+    border-radius: 10px; /* Rounded thumb for a sleek appearance */
+}
+
+/* Thumb on hover */
+.media_scroller::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Even darker color when hovered */
+}
+
+/* Optional: Adjust scrollbar corner if needed */
+.media_scroller::-webkit-scrollbar-corner {
+    background: #f0f0f0; /* Matches the track color */
 }
 
 /* Flip Effect */
@@ -5124,4 +5152,28 @@ a.yt-icon:hover {
     color: black;
     z-index: 100;
     overflow: hidden;
+}
+
+.nav-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgb(208, 205, 205);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-dot.active {
+    background-color: rgb(
+        55,
+        55,
+        55
+    ); /* Highlighted color for the active dot */
 }
