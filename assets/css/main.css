@@ -2525,7 +2525,7 @@ input[type="radio"]:focus + label:before {
 .icon:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    display: inline-block;
+    display: block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
