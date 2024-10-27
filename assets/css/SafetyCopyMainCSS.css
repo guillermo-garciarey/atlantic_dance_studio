@@ -4901,7 +4901,7 @@ body.is-preload #banner .inner {
 /* Extra Scrolling Gallery Component */
 
 .media_scroller {
-    height: 400px;
+    height: 500px;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -4997,13 +4997,11 @@ body.is-preload #banner .inner {
     perspective: 1000px;
     display: flex; /* Change to inline-flex to line up horizontally */
     flex-direction: column;
-    padding-left: 10px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 10px;
     border-radius: 20px;
     scroll-snap-align: start;
-    width: 300px;
-    height: 100%;
+    width: 300px; /* Define width to avoid full-width overlap */
+    height: 400px; /* Define height */
 }
 
 /* Container for flip effect */
@@ -5178,32 +5176,4 @@ a.yt-icon:hover {
         55,
         55
     ); /* Highlighted color for the active dot */
-}
-
-.halfcontainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-.stylesinfo {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width: 630px) {
-    .halfcontainer {
-        flex-wrap: wrap;
-    }
-
-    .stylesinfo {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        display: flex;
-        flex-direction: row;
-    }
 }
