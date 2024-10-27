@@ -5134,15 +5134,6 @@ a.yt-icon:hover {
     z-index: 10;
 }
 
-/* Chevron positioning */
-.chevron.chevron-left {
-    left: 10px; /* Position at the left edge */
-}
-
-.chevron.chevron-right {
-    right: 10px; /* Position at the right edge */
-}
-
 /* Icon styling */
 .chevron i {
     font-size: 20px; /* Adjust icon size for visibility */
