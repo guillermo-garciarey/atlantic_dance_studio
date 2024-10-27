@@ -5100,8 +5100,7 @@ a.yt-icon:hover {
 }
 
 @media (min-width: 925px) {
-    .navigation_bottom,
-    .nav_bottom {
+    .chevron_button {
         display: none !important;
     }
 }
@@ -5139,7 +5138,16 @@ a.yt-icon:hover {
     font-size: 20px; /* Adjust icon size for visibility */
 }
 
-.nav_bottom {
+/* Chevron Navigation Container */
+.chevron_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Chevron Button Styling */
+.chevron_button {
     width: 40px;
     height: 40px;
     background-color: rgba(55, 54, 54, 0.6);
@@ -5149,15 +5157,5 @@ a.yt-icon:hover {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
-
-.navigation_bottom {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    gap: 30px;
-    text-align: center;
+    font-size: 16px; /* Adjust font size for better centering */
 }
