@@ -5134,9 +5134,6 @@ a.yt-icon:hover {
 }
 
 /* Icon styling */
-.chevron i {
-    font-size: 20px; /* Adjust icon size for visibility */
-}
 
 /* Chevron Navigation Container */
 .chevron_navigation {
@@ -5146,7 +5143,6 @@ a.yt-icon:hover {
     gap: 30px;
 }
 
-/* Chevron Button Styling */
 .chevron_button {
     width: 40px;
     height: 40px;
@@ -5157,5 +5153,6 @@ a.yt-icon:hover {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 16px; /* Adjust font size for better centering */
+    position: relative;
+    z-index: 10;
 }
