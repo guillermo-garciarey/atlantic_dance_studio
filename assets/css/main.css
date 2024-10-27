@@ -5160,6 +5160,7 @@ a.yt-icon:hover {
     cursor: pointer;
     position: relative;
     z-index: 10;
+    text-align: center;
 }
 
 .navigation_bottom {
@@ -5167,4 +5168,5 @@ a.yt-icon:hover {
     align-content: center;
     justify-content: center;
     gap: 30px;
+    text-align: center;
 }
