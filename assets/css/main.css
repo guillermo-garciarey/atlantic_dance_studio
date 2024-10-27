@@ -5059,6 +5059,7 @@ a.yt-icon:hover {
     padding-top: 25px;
     padding-bottom: 25px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     height: 100%;
 }
@@ -5110,6 +5111,7 @@ a.yt-icon:hover {
     width: 100%;
     position: relative;
     display: flex;
+    flex: 2;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -5148,11 +5150,16 @@ a.yt-icon:hover {
     height: 40px;
     background-color: rgba(55, 54, 54, 0.6);
     color: #ffffff;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
     z-index: 10;
+}
+
+.scale {
+    transform: scale(1); /* Scale down to 80% */
+    transform-origin: center; /* Adjust the scaling origin */
 }
