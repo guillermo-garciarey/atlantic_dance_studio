@@ -5067,7 +5067,7 @@ a.yt-icon:hover {
     list-style: none;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 925px) {
     .halfcontainer {
         flex-wrap: wrap;
     }
@@ -5096,6 +5096,13 @@ a.yt-icon:hover {
     .chevron.chevron-left,
     .chevron.chevron-right {
         display: none;
+    }
+}
+
+@media (min-width: 925px) {
+    .navigation_bottom,
+    .nav_bottom {
+        display: none !important;
     }
 }
 
