@@ -4923,7 +4923,7 @@ body.is-preload #banner .inner {
     flex-direction: column;
     padding-top: 25px;
     padding-bottom: 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     scroll-snap-align: start;
     width: 300px;
     height: 100%;
@@ -4954,14 +4954,14 @@ body.is-preload #banner .inner {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 0; /* Ensure no margin */
     padding: 0; /* Ensure no padding */
 }
 
 .media_element2 .back img {
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     z-index: -10;
     object-fit: cover;
     height: 100%;
@@ -4972,11 +4972,13 @@ body.is-preload #banner .inner {
 
 .media_element2 .front img {
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 100%;
     width: 100%;
     cursor: pointer;
     transition: filter 0.3s linear;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .media_element2 .front p {
@@ -4988,6 +4990,7 @@ body.is-preload #banner .inner {
     left: 30px;
     z-index: 100;
     overflow: hidden;
+    text-transform: uppercase;
 }
 
 .media_element2 .back p {
@@ -5036,7 +5039,7 @@ a.yt-icon:hover {
     justify-content: center;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 /* Add flip transformation */
@@ -5049,18 +5052,18 @@ a.yt-icon:hover {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
 }
 
 .stylesinfo {
-    padding-top: 25px;
-    padding-bottom: 25px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: center;
+    align-content: center;
 }
 
 .stylesinfo li {
@@ -5077,6 +5080,7 @@ a.yt-icon:hover {
         padding-bottom: 25px;
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .media_scroller_container {
@@ -5164,4 +5168,14 @@ a.yt-icon:hover {
     .stylesinfo {
         flex: 1;
     }
+}
+
+.card_button {
+    position: absolute;
+    /* bottom: 2.5%; */
+    color: black !important;
+    border-color: black !important;
+    background-color: #ffffff !important;
+    opacity: 1;
+    scale: 0.7;
 }
