@@ -5157,7 +5157,7 @@ a.yt-icon:hover {
 
 .navigation_bottom {
     display: flex;
-    align-content: top;
+    align-content: center;
     justify-content: center;
     gap: 30px;
 }
