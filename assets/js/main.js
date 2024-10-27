@@ -303,25 +303,6 @@
         delay: 250,
     });
 
-    // Get the modal element
-    const modal = document.getElementById("modal1");
-
-    // Get the link that opens the modal
-    const link = document.querySelector(".media_element a");
-
-    // Function to open the modal
-    link.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent the default anchor behavior
-        modal.showModal(); // Open the modal
-    });
-
-    // Optional: Close the modal when clicking outside of it
-    modal.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.close(); // Close the modal
-        }
-    });
-
     // Select all media elements
     const mediaElements = document.querySelectorAll(".media_element2");
 
@@ -333,14 +314,4 @@
     });
 
     // Scroll bar setting
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const scroller = document.querySelector(".media_scroller");
-        const thirdItem = scroller.children[0]; // Get the third item (index 2)
-
-        if (thirdItem) {
-            // Calculate the offsetLeft of the third item and scroll the container
-            scroller.scrollLeft = thirdItem.offsetLeft;
-        }
-    });
 })(jQuery);
