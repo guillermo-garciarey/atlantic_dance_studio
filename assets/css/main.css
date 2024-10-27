@@ -5100,12 +5100,6 @@ a.yt-icon:hover {
     }
 }
 
-@media (min-width: 925px) {
-    .chevron_button {
-        display: none !important;
-    }
-}
-
 .media_scroller_container {
     height: 100%;
     width: 100%;
@@ -5150,7 +5144,7 @@ a.yt-icon:hover {
     height: 40px;
     background-color: rgba(55, 54, 54, 0.6);
     color: #ffffff;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -5162,4 +5156,10 @@ a.yt-icon:hover {
 .scale {
     transform: scale(1); /* Scale down to 80% */
     transform-origin: center; /* Adjust the scaling origin */
+}
+
+@media (min-width: 925px) {
+    .chevron_button {
+        display: none !important;
+    }
 }
