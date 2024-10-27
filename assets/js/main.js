@@ -313,5 +313,28 @@
         });
     });
 
-    // Scroll bar setting
+    // Select all links within .stylesinfo that point to card IDs
+    const links = document.querySelectorAll(".stylesinfo a");
+
+    links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const targetId = link.getAttribute("href").substring(1); // Get ID without '#'
+            const targetCard = document.getElementById(targetId);
+
+            if (targetCard) {
+                // Scroll the target card into view
+                targetCard.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                });
+
+                // Optional: Add flip animation after scrolling
+                setTimeout(() => {
+                    targetCard.classList.toggle("flipped");
+                }, 500); // Adjust timing as needed
+            }
+        });
+    });
 })(jQuery);
