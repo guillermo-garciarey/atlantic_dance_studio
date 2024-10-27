@@ -5076,11 +5076,11 @@ a.yt-icon:hover {
     }
 
     .stylesinfo {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        display: flex;
+        display: block;
         flex-direction: column;
         text-align: center;
+        position: relative; /* Ensures `z-index` takes effect */
+        z-index: 1000;
     }
 
     .media_scroller_container {
@@ -5178,4 +5178,12 @@ a.yt-icon:hover {
     background-color: #ffffff !important;
     opacity: 1;
     scale: 0.7;
+}
+
+.stylesinfo a {
+    padding: 10px;
+    display: inline-block; /* This ensures the padding is applied properly */
+    pointer-events: auto;
+    display: block; /* Makes the anchor cover the entire area of the parent */
+    padding: 8px 12px; /* Additional padding to enhance touch sensitivity */
 }

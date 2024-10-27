@@ -329,11 +329,6 @@
                     behavior: "smooth",
                     block: "center",
                 });
-
-                // Optional: Add flip animation after scrolling
-                setTimeout(() => {
-                    targetCard.classList.toggle("flipped");
-                }, 500); // Adjust timing as needed
             }
         });
     });
