@@ -5199,3 +5199,11 @@ a.yt-icon:hover {
 .fa-solid {
     display: flex !important;
 }
+
+.h6:hover {
+    color: var(--primary-500);
+}
+
+.stylesinfo a:hover {
+    color: var(--primary-500);
+}
