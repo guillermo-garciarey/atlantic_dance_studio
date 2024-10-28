@@ -5051,11 +5051,12 @@ a.yt-icon:hover {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .stylesinfo {
@@ -5064,6 +5065,9 @@ a.yt-icon:hover {
     height: 100%;
     justify-content: center;
     align-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 .stylesinfo li {
@@ -5071,41 +5075,45 @@ a.yt-icon:hover {
 }
 
 @media (max-width: 925px) {
-    .halfcontainer {
-        flex-wrap: wrap !important;
-    }
-
-    .stylesinfo {
-        display: block;
-        flex-direction: column;
-        text-align: center;
-        position: relative; /* Ensures `z-index` takes effect */
-        z-index: 1000;
-    }
-
     .media_scroller_container {
         padding-top: 0px;
         padding-bottom: 0px;
     }
 
-    .media_element2 {
-        width: 250px;
-    }
-
     .media_scroller {
         width: 100%;
     }
+}
 
-    .chevron,
-    .chevron.chevron-left,
-    .chevron.chevron-right {
+@media (min-width: 725px) {
+    .media_scroller_container {
+        width: 615px !important;
+    }
+}
+
+@media (min-width: 1050px) {
+    .media_scroller_container {
+        width: 925px !important;
+    }
+}
+
+@media (min-width: 1700px) {
+    .stylesinfo {
         display: none;
+    }
+
+    .media_scroller_container {
+        width: 1300px !important;
+    }
+
+    .chevron_button {
+        display: none !important;
     }
 }
 
 .media_scroller_container {
     height: 100%;
-    width: 100%;
+    width: 300px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -5146,7 +5154,7 @@ a.yt-icon:hover {
     height: 40px;
     background-color: rgba(55, 54, 54, 0.6);
     color: #ffffff;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -5186,4 +5194,8 @@ a.yt-icon:hover {
     pointer-events: auto;
     display: block; /* Makes the anchor cover the entire area of the parent */
     padding: 8px 12px; /* Additional padding to enhance touch sensitivity */
+}
+
+.fa-solid {
+    display: flex;
 }
