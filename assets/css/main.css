@@ -2953,7 +2953,7 @@ ul.contact-icons li {
 }
 
 ul.contact-icons li .icon:before {
-    border-radius: 50%;
+    border-radius: 6px;
     display: inline-block;
     height: 3rem;
     line-height: 3rem;
@@ -3020,9 +3020,42 @@ ul.contact-icons li:first-child {
     }
 }
 
-ul.contact-icons li .icon:before {
-    background: #000000;
-    color: #ffffff;
+/* Default icon style */
+ul.contact-icons li .icon::before {
+    background: #000000; /* Default background */
+    color: #ffffff; /* Default color */
+}
+
+/* Facebook-specific icon style */
+ul.contact-icons li .icon.fb::before {
+    background: #1877f2; /* Facebook blue */
+    color: #ffffff; /* Text color for contrast */
+}
+
+/* Instagram-specific icon style */
+ul.contact-icons li .icon.insta::before {
+    /* Instagram gradient background */
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+    color: #ffffff; /* Text color for contrast */
+}
+
+/* YouTube-specific icon style */
+ul.contact-icons li .icon.yt::before {
+    background: #ff0000; /* YouTube red */
+    color: #ffffff; /* Text color for contrast */
+}
+
+/* WhatsApp-specific icon style */
+ul.contact-icons li .icon.wa::before {
+    background: #25d366; /* WhatsApp green */
+    color: #ffffff; /* Text color for contrast */
 }
 
 /* Section/Article */
@@ -5198,12 +5231,4 @@ a.yt-icon:hover {
 
 .fa-solid {
     display: flex !important;
-}
-
-.h6:hover {
-    color: var(--primary-500);
-}
-
-.stylesinfo a:hover {
-    color: var(--primary-500);
 }
