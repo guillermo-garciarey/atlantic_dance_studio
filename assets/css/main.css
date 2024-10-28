@@ -5185,8 +5185,8 @@ a.yt-icon:hover {
 .chevron_button {
     width: 40px;
     height: 40px;
-    background-color: rgba(55, 54, 54, 0.6);
-    color: #ffffff;
+    background-color: transparent;
+    color: #282828;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -5231,4 +5231,194 @@ a.yt-icon:hover {
 
 .fa-solid {
     display: flex !important;
+}
+
+/* Footer Icons */
+
+.footer_icon {
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.footer_icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    text-transform: none !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
+
+.footer_icon:before {
+    font-size: 1.25em;
+}
+
+.footer_icon > .label {
+    display: none;
+}
+
+.footer_icon.solid:before {
+    font-weight: 900;
+}
+
+.footer_icon.brands:before {
+    font-family: "Font Awesome 5 Brands";
+}
+
+.footer_icon.featured {
+    color: #8fc3ec;
+    display: block;
+    margin: 0 0 1.5em 0;
+    cursor: default;
+}
+
+.footer_icon.featured:before {
+    font-size: 6em;
+}
+
+/* Social (with Footer Icons) */
+
+ul.social {
+    cursor: default;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+ul.social li {
+    position: relative;
+    display: inline-block;
+    margin: 0.25em;
+    top: 0;
+    padding-left: 0;
+}
+
+ul.social li a {
+    -moz-transition: top 0.2s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out;
+    transition: top 0.2s ease-in-out;
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    top: 0;
+    position: relative;
+}
+
+ul.social li a:before {
+    background-image: url("images/bg.png"),
+        -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: url("images/bg.png"),
+        -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: url("images/bg.png"),
+        -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: url("images/bg.png"),
+        linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    background-color: #444;
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 0px 1px #282828,
+        inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
+    color: #2e2e2e !important;
+    display: block;
+    font-size: 26px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    outline: 0;
+    overflow: hidden;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+    width: 48px;
+}
+
+ul.social li a.fa-instagram {
+    background-color: #e1306c;
+}
+
+ul.social li a.fa-whatsapp {
+    background-color: #20af54;
+}
+
+ul.social li a.fa-twitter {
+    background-color: #2daae4;
+}
+
+ul.social li a.fa-facebook-f {
+    background-color: #3c5a98;
+}
+
+ul.social li a.fa-dribbble {
+    background-color: #c4376b;
+}
+
+ul.social li a.fa-linkedin-in {
+    background-color: #006599;
+}
+
+ul.social li a.fa-tumblr {
+    background-color: #51718a;
+}
+
+ul.social li a.fa-google-plus {
+    background-color: #da2713;
+}
+
+ul.social li a.fa-github {
+    background-color: #fafafa;
+}
+
+ul.social li a.fa-rss {
+    background-color: #f2600b;
+}
+
+ul.social li a.fa-foursquare {
+    background-color: #39a3d4;
+}
+
+ul.social li a.fa-skype {
+    background-color: #10bef1;
+}
+
+ul.social li a.fa-soundcloud {
+    background-color: #fe5419;
+}
+
+ul.social li a.fa-youtube {
+    background-color: #bf2e25;
+}
+
+ul.social li a.fa-blogger {
+    background-color: #ff6501;
+}
+
+ul.social li a.fa-flickr {
+    background-color: #0062db;
+}
+
+ul.social li a.fa-vimeo {
+    background-color: #4c8ab0;
+}
+
+ul.social li a:hover {
+    top: -5px;
+}
+
+ul.social li a:hover:before {
+    background-color: transparent;
 }
