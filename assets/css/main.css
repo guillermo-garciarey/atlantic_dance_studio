@@ -4941,6 +4941,7 @@ body.is-preload #banner .inner {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     width: 100%; /* Limits width so chevrons are visible */
+    scroll-behavior: smooth;
 }
 
 .media_scroller::-webkit-scrollbar {
@@ -5091,6 +5092,7 @@ a.yt-icon:hover {
 }
 
 .stylesinfo {
+    width: 300px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -5099,18 +5101,28 @@ a.yt-icon:hover {
     text-align: center;
     position: relative;
     z-index: 1000;
+    /* background-color: var(--background-100);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 0px 1px #282828,
+        inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1); */
 }
 
 .stylesinfo h6 {
+    padding: 3px;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-content: center;
-    text-align: center;
+    /* text-align: center; */
     position: relative;
     z-index: 1000;
     margin: 10px 0 10px 0;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: inset 0px 0px 0px 1px #282828,
+        inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
 }
 
 .stylesinfo li {
@@ -5190,7 +5202,21 @@ a.yt-icon:hover {
     gap: 30px;
 }
 
-.chevron_button {
+.chevron_button_left {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #282828;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.chevron_button_right {
     width: 40px;
     height: 40px;
     background-color: transparent;
@@ -5327,14 +5353,14 @@ ul.social li a {
 }
 
 ul.social li a {
-    /* background-image: url("../../images/bg.png"),
+    background-image: url("../../images/bg.png"),
         -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     background-image: url("../../images/bg.png"),
         -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     background-image: url("../../images/bg.png"),
         -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     background-image: url("../../images/bg.png"),
-        linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); */
+        linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     -moz-transition: scale 0.2s ease-in-out;
     -webkit-transition: scale 0.2s ease-in-out;
     -ms-transition: scale 0.2s ease-in-out;

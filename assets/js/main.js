@@ -332,4 +332,35 @@
             }
         });
     });
+
+    // Scroller buttons
+
+    // Scroller buttons
+    const scroller = document.querySelector(".media_scroller");
+    const scrollLeftButton = document.querySelector(".chevron_button_left");
+    const scrollRightButton = document.querySelector(".chevron_button_right");
+    const scrollAmount = 300; // Amount to scroll on each click
+
+    function updateButtonState() {
+        // Disable left button if scrolled all the way to the left
+        scrollLeftButton.disabled = scroller.scrollLeft === 0;
+
+        // Disable right button if scrolled all the way to the right
+        const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
+        scrollRightButton.disabled = scroller.scrollLeft >= maxScrollLeft;
+    }
+
+    scrollLeftButton.addEventListener("click", () => {
+        scroller.scrollLeft -= scrollAmount;
+        updateButtonState(); // Update button states after scrolling
+    });
+
+    scrollRightButton.addEventListener("click", () => {
+        scroller.scrollLeft += scrollAmount;
+        updateButtonState(); // Update button states after scrolling
+    });
+
+    // Initial button state update on load
+    window.addEventListener("load", updateButtonState);
+    scroller.addEventListener("scroll", updateButtonState);
 })(jQuery);
