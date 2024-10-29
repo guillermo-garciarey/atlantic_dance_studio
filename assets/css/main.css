@@ -2529,7 +2529,6 @@ input[type="radio"]:focus + label:before {
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    line-height: 1;
     text-transform: none !important;
     font-family: "Font Awesome 5 Free";
     font-weight: 400;
@@ -5172,8 +5171,6 @@ a.yt-icon:hover {
     z-index: 10;
 }
 
-/* Icon styling */
-
 /* Chevron Navigation Container */
 .chevron_navigation {
     display: flex;
@@ -5318,24 +5315,24 @@ ul.social li a {
     position: relative;
 }
 
-ul.social li a:before {
-    background-image: url("images/bg.png"),
+ul.social li a {
+    background-image: url("../../images/bg.png"),
         -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-    background-image: url("images/bg.png"),
+    background-image: url("../../images/bg.png"),
         -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-    background-image: url("images/bg.png"),
+    background-image: url("../../images/bg.png"),
         -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-    background-image: url("images/bg.png"),
+    background-image: url("../../images/bg.png"),
         linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-    -moz-transition: background-color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out;
-    background-color: #444;
+    -moz-transition: scale 0.2s ease-in-out;
+    -webkit-transition: scale 0.2s ease-in-out;
+    -ms-transition: scale 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out;
+    background-color: var(--background-50);
     border-radius: 6px;
     box-shadow: inset 0px 0px 0px 1px #282828,
         inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-    color: #2e2e2e !important;
+    color: whitesmoke;
     display: block;
     font-size: 26px;
     height: 48px;
@@ -5347,12 +5344,16 @@ ul.social li a:before {
     width: 48px;
 }
 
+ul.social li a.fa-viber {
+    color: #665cac;
+}
+
 ul.social li a.fa-instagram {
-    background-color: #e1306c;
+    color: #e1306c;
 }
 
 ul.social li a.fa-whatsapp {
-    background-color: #20af54;
+    color: #20af54;
 }
 
 ul.social li a.fa-twitter {
@@ -5360,7 +5361,7 @@ ul.social li a.fa-twitter {
 }
 
 ul.social li a.fa-facebook-f {
-    background-color: #3c5a98;
+    color: #3c5a98;
 }
 
 ul.social li a.fa-dribbble {
@@ -5400,7 +5401,7 @@ ul.social li a.fa-soundcloud {
 }
 
 ul.social li a.fa-youtube {
-    background-color: #bf2e25;
+    color: #bf2e25;
 }
 
 ul.social li a.fa-blogger {
@@ -5416,7 +5417,7 @@ ul.social li a.fa-vimeo {
 }
 
 ul.social li a:hover {
-    top: -5px;
+    scale: 1.1;
 }
 
 ul.social li a:hover:before {
