@@ -4939,7 +4939,7 @@ body.is-preload #banner .inner {
     align-items: center;
     justify-content: top;
     overflow-x: scroll;
-    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: x mandatory;
     width: 100%; /* Limits width so chevrons are visible */
 }
 
