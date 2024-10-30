@@ -5475,3 +5475,99 @@ ul.social li a:hover {
 ul.social li a:hover:before {
     background-color: transparent;
 }
+
+/* Pricing Tables */
+
+.pricing_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+    gap: 20px;
+}
+
+.price_card {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    padding: 20px;
+    /* border-right: var(--background-200) solid 1px;
+    border-left: var(--background-200) solid 1px; */
+}
+
+.price_card:nth-child(2) {
+    border: var(--primary-500) solid 1.5px;
+    border-radius: 10px;
+}
+
+.price_card:nth-child(2) .pc_button {
+    background-color: var(--primary-500);
+}
+
+.price_card:nth-child(2) .pc_button h6 {
+    color: var(--background-100);
+}
+
+@media (max-width: 1160px) {
+    .pricing_container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.pc_info,
+.pc_price,
+.pc_title,
+.pc_button {
+    flex-grow: 1;
+}
+
+.pc_title {
+    justify-content: center;
+}
+
+.pc_title h5 {
+    color: rgb(78, 78, 78);
+    text-align: center;
+}
+
+.pc_price {
+    font-weight: 500;
+}
+
+.pc_price p,
+.pc_info ul li p {
+    color: rgb(49, 49, 49);
+}
+
+.pc_title {
+    /* background-color: var(--primary-500);
+    border-radius: 10px; */
+}
+
+.pc_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Adjust height as needed */
+    width: 100%;
+    border-radius: 10px;
+    border: var(--primary-500) solid 1.5px;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+}
+
+.pc_button h6 {
+    margin: 0;
+    color: var(--primary-500);
+}
+
+.pc_button:hover h6 {
+    color: var(--background-100);
+}
+
+.pc_button:hover {
+    background-color: var(--primary-500);
+}
