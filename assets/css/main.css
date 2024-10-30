@@ -5580,7 +5580,7 @@ ul.social li a:hover:before {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .container {
         flex-direction: column;
     }
@@ -5597,7 +5597,7 @@ ul.social li a:hover:before {
     }
 
     .flex_content {
-        width: 70%;
+        width: 80%;
         align-self: center;
         padding: 10% 0;
     }
