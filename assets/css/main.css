@@ -5583,6 +5583,7 @@ ul.social li a:hover:before {
 @media screen and (max-width: 600px) {
     .container {
         flex-direction: column;
+        margin: 0;
     }
 
     .flex2 {
@@ -5597,7 +5598,7 @@ ul.social li a:hover:before {
     }
 
     .flex_content {
-        width: 80%;
+        width: 90%;
         align-self: center;
         padding: 10% 0;
     }
