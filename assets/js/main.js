@@ -303,67 +303,6 @@
         delay: 250,
     });
 
-    // Select all media elements
-    const mediaElements = document.querySelectorAll(".media_element2");
-
-    // Add click event to each element
-    mediaElements.forEach((element) => {
-        element.addEventListener("click", () => {
-            element.classList.toggle("flip");
-        });
-    });
-
-    // Select all links within .stylesinfo that point to card IDs
-    const links = document.querySelectorAll(".stylesinfo a");
-
-    links.forEach((link) => {
-        link.addEventListener("click", (event) => {
-            event.preventDefault(); // Prevent the default link behavior
-
-            const targetId = link.getAttribute("href").substring(1); // Get ID without '#'
-            const targetCard = document.getElementById(targetId);
-
-            if (targetCard) {
-                // Scroll the target card into view
-                targetCard.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                });
-            }
-        });
-    });
-
-    // Scroller buttons
-
-    // Scroller buttons
-    const scroller = document.querySelector(".media_scroller");
-    const scrollLeftButton = document.querySelector(".chevron_button_left");
-    const scrollRightButton = document.querySelector(".chevron_button_right");
-    const scrollAmount = 300; // Amount to scroll on each click
-
-    function updateButtonState() {
-        // Disable left button if scrolled all the way to the left
-        scrollLeftButton.disabled = scroller.scrollLeft === 0;
-
-        // Disable right button if scrolled all the way to the right
-        const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
-        scrollRightButton.disabled = scroller.scrollLeft >= maxScrollLeft;
-    }
-
-    scrollLeftButton.addEventListener("click", () => {
-        scroller.scrollLeft -= scrollAmount;
-        updateButtonState(); // Update button states after scrolling
-    });
-
-    scrollRightButton.addEventListener("click", () => {
-        scroller.scrollLeft += scrollAmount;
-        updateButtonState(); // Update button states after scrolling
-    });
-
-    // Initial button state update on load
-    window.addEventListener("load", updateButtonState);
-    scroller.addEventListener("scroll", updateButtonState);
-
     // Accordion
 
     const accordion = document.querySelector(".accordion");
@@ -396,6 +335,41 @@
 
         panelToActivate
             .querySelector(".accordion-content")
+            .setAttribute("aria-hidden", false);
+    }
+
+    // Accordion European
+
+    const accordion_euro = document.querySelector(".accordion_euro");
+
+    accordion_euro.addEventListener("click", (e) => {
+        const activePanel_euro = e.target.closest(".accordion-panel_euro");
+        if (!activePanel_euro) return;
+        toggleAccordion(activePanel_euro);
+    });
+
+    function toggleAccordion_euro(panelToActivate_euro) {
+        const buttons_euro =
+            panelToActivate_euro.parentElement.querySelectorAll("button_euro");
+        const contents_euro =
+            panelToActivate_euro.parentElement.querySelectorAll(
+                ".accordion-content_euro"
+            );
+
+        buttons_euro.forEach((button) => {
+            button_euro.setAttribute("aria-expanded", false);
+        });
+
+        contents_euro.forEach((content) => {
+            content_euro.setAttribute("aria-hidden", true);
+        });
+
+        panelToActivate_euro
+            .querySelector("button")
+            .setAttribute("aria-expanded", true);
+
+        panelToActivate_euro
+            .querySelector(".accordion-content_euro")
             .setAttribute("aria-hidden", false);
     }
 })(jQuery);
