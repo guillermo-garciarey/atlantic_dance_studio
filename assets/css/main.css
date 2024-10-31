@@ -2908,6 +2908,8 @@ ul.actions.fit.stacked {
 
 .tabs > .panels > .panel.active {
     opacity: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .tabs > .titles > .title:hover {
@@ -5628,6 +5630,35 @@ ul.social li a:hover:before {
     transition: flex-basis 500ms;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .accordion {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .accordion-panel {
+        height: 450px;
+        flex-grow: 1;
+    }
+
+    .accordion-title::after {
+        content: "";
+        left: calc((1rem + var(--_button-size)) * -1);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        height: var(--_button-size);
+        background: hsl(0 0% 0% / 0.5);
+        width: calc(100% + (var(--_button-size) * 2));
+        z-index: -1;
+    }
+
+    .accordion-title {
+        color: transparent !important;
+    }
 }
 
 .accordion-image {
@@ -5691,7 +5722,7 @@ ul.social li a:hover:before {
 }
 
 .accordion-title {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.2rem;
