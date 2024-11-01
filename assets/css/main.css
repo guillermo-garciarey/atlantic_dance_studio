@@ -5438,7 +5438,7 @@ ul.social li a:hover {
     padding: 1rem;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
 }
 
 .teacher-card {
@@ -5447,9 +5447,11 @@ ul.social li a:hover {
     padding-block: 2rem;
     height: 400px;
     flex: 1;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: transparent;
     color: #282828 !important;
+    border-bottom: 0.1px solid var(--primary-400);
+    padding: 2rem;
 }
 
 .teacher-card-title {
@@ -5458,13 +5460,13 @@ ul.social li a:hover {
     position: relative;
     align-items: center;
     width: 35%;
-    border-right: 0.1px solid var(--primary-400);
+    /* border-right: 0.1px solid var(--primary-400); */
     justify-content: center;
     gap: 1rem;
 }
 
 .teacher-card-title h3 {
-    color: var(--background-950) !important;
+    color: #282828 !important;
 }
 
 .teacher-button {
@@ -5489,7 +5491,7 @@ ul.social li a:hover {
     width: 100%;
     padding: 0.3rem;
     /* border: #282828 solid 1px; */
-    border: var(--primary-400) solid 1px;
+    /* border: var(--primary-400) solid 1px; */
 }
 
 /* .teacher-image::after {
@@ -5528,7 +5530,7 @@ ul.social li a:hover {
 }
 
 .reverse-teacher-card .teacher-card-title {
-    border-left: 0.1px solid var(--primary-400);
+    /* border-left: 0.1px solid var(--primary-400); */
     border-right: none;
 }
 
@@ -5539,11 +5541,16 @@ ul.social li a:hover {
         width: 100%;
         padding-block: 2rem;
         flex: 1;
-        border-radius: 10px;
+        border-radius: 0px !important;
         background-color: transparent;
         color: #282828 !important;
         justify-items: center;
         align-items: center;
+        border-bottom: 0.1px solid var(--primary-400);
+    }
+
+    .teacher-card:last-child {
+        border: none !important;
     }
 
     .teacher-card-title {
