@@ -5438,7 +5438,7 @@ ul.social li a:hover {
     padding: 1rem;
     align-items: center;
     justify-content: space-between;
-    /* gap: 1.5rem; */
+    gap: 1.5rem;
 }
 
 .teacher-card {
@@ -5495,20 +5495,6 @@ ul.social li a:hover {
     /* border: var(--primary-400) solid 1px; */
 }
 
-/* .teacher-image::after {
-    content: "";
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--primary-400);
-    z-index: -1;
-    aspect-ratio: 1 / 1;
-} */
-
 .teacher-card-content {
     display: flex;
     flex-direction: column;
@@ -5531,8 +5517,12 @@ ul.social li a:hover {
 }
 
 .reverse-teacher-card .teacher-card-title {
-    /* border-left: 0.1px solid var(--primary-400); */
+    border: none !important;
     border-right: none;
+}
+
+.teacher-card:last-child {
+    border: none !important;
 }
 
 @media (max-width: 1200px) {
