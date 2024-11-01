@@ -5557,5 +5557,6 @@ ul.social li a:hover {
     .teacher-card-title {
         width: 100%;
         border: none !important;
+        text-align: center;
     }
 }
