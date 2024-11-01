@@ -5548,6 +5548,9 @@ ul.social li a:hover {
         justify-items: center;
         align-items: center;
         border-bottom: 0.1px solid var(--primary-400);
+        padding-block: 2rem;
+        padding-inline: 0;
+        gap: 1rem;
     }
 
     .teacher-card:last-child {
@@ -5558,5 +5561,9 @@ ul.social li a:hover {
         width: 100%;
         border: none !important;
         text-align: center;
+    }
+
+    .teacher-card-content {
+        padding: 0;
     }
 }
