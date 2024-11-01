@@ -5482,6 +5482,7 @@ ul.social li a:hover {
     width: 100%;
     height: auto;
     isolation: isolate;
+    aspect-ratio: 1 /1;
 }
 
 .teacher-image img {
