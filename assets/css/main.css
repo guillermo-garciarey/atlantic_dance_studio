@@ -5563,7 +5563,7 @@ ul.social li a:hover {
         width: 100%;
         padding-block: 2rem;
         flex: 1;
-        border-radius: 0px !important;
+
         background-color: transparent;
         color: #282828 !important;
         justify-items: center;
@@ -5602,4 +5602,12 @@ ul.social li a:hover {
     border: solid black 1px;
     background-color: #ffffff2d;
     rotate: -0.7deg;
+}
+
+/* Multi level menu */
+
+.depth2 {
+    padding-left: 5rem;
+    color: #1877f2 !important;
+    scale: 0.75;
 }
