@@ -5463,8 +5463,9 @@ ul.social li a:hover {
     /* border-radius: 10px; */
     background-color: transparent;
     color: #282828 !important;
-    border-bottom: 0.1px solid var(--primary-400);
+    /* border-bottom: 0.1px solid var(--primary-400); */
     padding: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .teacher-card-title {
