@@ -5518,6 +5518,7 @@ ul.social li a:hover {
 
 .teacher-card-content h3 {
     color: #282828 !important;
+    text-align: center;
 }
 
 .teacher-card-title ul.social_alt {
@@ -5582,6 +5583,7 @@ ul.social li a:hover {
 
     .teacher-card-content {
         padding: 0;
+        align-items: center;
     }
 }
 
