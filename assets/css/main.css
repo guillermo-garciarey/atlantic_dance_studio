@@ -5568,7 +5568,7 @@ ul.social li a:hover {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     height: 200px;
-    /* border: solid white 2px; */
+    border: solid white 2px;
     flex-grow: 1;
     background-color: transparent;
     rotate: -0.5deg;
