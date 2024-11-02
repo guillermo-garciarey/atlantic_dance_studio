@@ -5570,6 +5570,6 @@ ul.social li a:hover {
     height: 200px;
     border: solid white 2px;
     flex-grow: 1;
-    background-color: transparent;
-    rotate: -0.5deg;
+    background-color: #ffffff2d;
+    rotate: -0.7deg;
 }
