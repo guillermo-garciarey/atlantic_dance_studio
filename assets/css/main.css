@@ -3386,7 +3386,7 @@ table.alt tbody tr td {
     }
 
     .wrapper > .inner {
-        width: calc(100% - 4rem);
+        width: calc(100% - 2.5rem);
     }
 }
 
@@ -5448,7 +5448,7 @@ ul.social li a:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 1rem;
+    padding-block: 1rem;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
@@ -5456,7 +5456,7 @@ ul.social li a:hover {
 
 .teacher-card {
     display: flex;
-    width: 100%;
+    width: 110%;
     padding-block: 2rem;
     height: 400px;
     flex: 1;
@@ -5566,7 +5566,7 @@ ul.social li a:hover {
         color: #282828 !important;
         justify-items: center;
         align-items: center;
-        border-bottom: 0.1px solid var(--primary-400);
+        /* border-bottom: 0.1px solid var(--primary-400); */
         padding-block: 2rem;
         padding-inline: 0;
         gap: 1rem;
@@ -5583,7 +5583,8 @@ ul.social li a:hover {
     }
 
     .teacher-card-content {
-        padding: 0;
+        padding-inline: 0.75rem;
+        padding-block: 0rem;
         align-items: center;
     }
 }
