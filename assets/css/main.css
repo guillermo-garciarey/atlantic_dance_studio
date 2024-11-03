@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:600");
 
-/*
-	Standout by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
-
 :root {
     --background-50: hsl(60, 12%, 95%);
     --background-100: hsl(60, 10%, 90%);
