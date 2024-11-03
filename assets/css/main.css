@@ -5158,11 +5158,12 @@ ul.social li a:hover {
     z-index: -1;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .accordion {
         flex-direction: row;
         width: 100%;
         padding-inline: 1rem;
+        height: 750%;
     }
 
     .accordion-panel {
@@ -5320,6 +5321,7 @@ ul.social li a:hover {
         flex-direction: row;
         width: 100%;
         padding-inline: 1rem;
+        height: 750px;
     }
 
     .accordion-panel_euro {
