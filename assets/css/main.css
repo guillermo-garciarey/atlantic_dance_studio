@@ -4039,7 +4039,7 @@ body #page-wrapper {
     -ms-user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-user-select: none;
-    background-color: rgba(224, 224, 224, 0.9);
+    background-color: #42424250;
     cursor: default;
     height: 100%;
     left: 0;
@@ -4052,6 +4052,7 @@ body #page-wrapper {
     visibility: hidden;
     width: 100%;
     z-index: 10002;
+    overflow-y: scroll;
 }
 
 #menu .inner {
@@ -4165,6 +4166,8 @@ body.is-menu-visible #menu .inner {
     -ms-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+    position: absolute;
+    top: 3rem;
 }
 
 /* Banner */
