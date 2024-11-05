@@ -4052,7 +4052,6 @@ body #page-wrapper {
     visibility: hidden;
     width: 100%;
     z-index: 10002;
-    overflow-y: scroll;
 }
 
 #menu .inner {
@@ -5604,10 +5603,8 @@ ul.social li a:hover {
     rotate: -0.7deg;
 }
 
-/* Multi level menu */
+/* Menu 2 */
 
-.depth2 {
-    padding-left: 5rem;
-    color: #1877f2 !important;
-    scale: 0.75;
-}
+/* .menu2 {
+    display: none;
+} */
