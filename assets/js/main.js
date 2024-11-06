@@ -372,6 +372,4 @@
             .querySelector(".accordion-content_euro")
             .setAttribute("aria-hidden", false);
     }
-
-    // Teacher Cards
 })(jQuery);

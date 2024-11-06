@@ -4052,6 +4052,7 @@ body #page-wrapper {
     visibility: hidden;
     width: 100%;
     z-index: 10002;
+    overflow-y: hidden;
 }
 
 #menu .inner {
@@ -4074,6 +4075,16 @@ body #page-wrapper {
     position: relative;
     text-transform: uppercase;
     width: 24rem;
+    max-height: 90%;
+    /* height: calc(100vh - 3rem);  */
+    overflow-y: scroll; /* Enable scrolling */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar on Webkit (Chrome, Safari) */
+#menu .inner::-webkit-scrollbar {
+    display: none;
 }
 
 #menu h2 {
@@ -4122,7 +4133,7 @@ body #page-wrapper {
     border: 0;
     color: inherit;
     display: block;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.25rem;
     line-height: 1.85rem;
     padding: 0.75rem 0;
@@ -5603,12 +5614,6 @@ ul.social li a:hover {
     rotate: -0.7deg;
 }
 
-/* Menu 2 */
-
-/* .menu2 {
-    display: none;
-} */
-
 /* Studio and Map */
 
 .studio {
@@ -5671,4 +5676,17 @@ ul.social li a:hover {
         /* margin-bottom: 4rem; */
         border-bottom: 0.1px solid var(--primary-400);
     }
+}
+
+/* Menu 2 */
+
+.submenu {
+    color: grey; /* Change text color */
+    font-weight: 300 !important; /* Make it bold */
+}
+
+.submenu a {
+    color: inherit; /* Use the color of the parent element */
+    scale: 0.8;
+    text-decoration: none;
 }
