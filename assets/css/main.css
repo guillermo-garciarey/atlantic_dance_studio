@@ -5608,3 +5608,67 @@ ul.social li a:hover {
 /* .menu2 {
     display: none;
 } */
+
+/* Studio and Map */
+
+.studio {
+    background-color: #2f2f2f;
+    color: #ccc !important;
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5% 5%;
+    display: flex;
+    justify-content: center;
+    /* gap: 5rem; */
+}
+
+.studio_card {
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    /* border-radius: 10px; */
+    background-color: #2f2f2f;
+    color: #ccc !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 5%;
+    padding-block: 2.5%;
+    width: 40%;
+    flex-grow: 1;
+
+    h5 {
+        font-weight: 600;
+        color: var(--primary-400);
+    }
+}
+
+.studio-map {
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid var(--primary-400);
+}
+
+.borderright {
+    border-right: 0.1px solid var(--primary-400);
+}
+
+@media (max-width: 1300px) {
+    .studio {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .studio_card {
+        width: 100%;
+        padding-inline: 5%;
+        padding-block: 10%;
+    }
+
+    .borderright {
+        border-right: none;
+        /* margin-bottom: 4rem; */
+        border-bottom: 0.1px solid var(--primary-400);
+    }
+}
