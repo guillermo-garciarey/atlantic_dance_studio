@@ -5690,3 +5690,114 @@ ul.social li a:hover {
     scale: 0.8;
     text-decoration: none;
 }
+
+/* Events */
+
+.event_wrapper {
+    padding: 1%;
+}
+
+.event_container {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    padding-inline: 1%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the start */
+    gap: 5%;
+    overflow-x: scroll;
+    width: 100%;
+    scroll-padding-left: 40px;
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.event_card {
+    border: solid var(--background-900) 1.5px;
+    background: linear-gradient(
+        to bottom,
+        var(--primary-400),
+        33.33%,
+        white 33.33%
+    );
+    border-radius: 5px;
+    text-align: center;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 130px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.event_card h3 {
+    color: white;
+    text-align: center;
+}
+
+.event_card p {
+    font-size: larger;
+    font-weight: 800;
+    text-align: center;
+}
+
+.eventbutton {
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    display: flex !important; /* Flexbox for centering */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 20px);
+    background-color: white;
+    border: var(--background-900) solid 1.5px;
+    box-sizing: border-box; /* Ensures border fits within dimensions */
+    font-size: large;
+    line-height: 1; /* Prevents text alignment issues */
+    text-align: center;
+    letter-spacing: 0px;
+    padding-inline: 0px !important;
+    padding-block: 0px !important;
+}
+
+.eventbutton .fa {
+    display: flex; /* Ensures it takes up space as a block */
+    line-height: 1; /* Prevent extra spacing */
+    vertical-align: middle; /* Aligns it with the flex container */
+    margin: 0; /* Removes any inherited margin */
+    padding: 0; /* Removes any inherited padding */
+    position: relative; /* Allows for fine adjustments if needed */
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%); /* Adjusts to actual height */
+}
+
+.eventbutton .fa::before {
+    display: block; /* Ensures it takes up space as a block */
+    line-height: 1; /* Prevent extra spacing */
+    vertical-align: middle; /* Aligns it with the flex container */
+    margin: 0; /* Removes any inherited margin */
+    padding: 0; /* Removes any inherited padding */
+    position: relative; /* Allows for fine adjustments if needed */
+    top: 50%; /* Centers vertically */
+    transform: translateY(-50%); /* Adjusts to actual height */
+}
+
+.ordinal {
+    font-size: 0.75em; /* Smaller size */
+    vertical-align: super; /* Aligns like a superscript */
+    color: darkgrey; /* Optional: Different color */
+}

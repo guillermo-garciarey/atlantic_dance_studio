@@ -372,4 +372,17 @@
             .querySelector(".accordion-content_euro")
             .setAttribute("aria-hidden", false);
     }
+
+    // Details & Summary
+
+    document.querySelectorAll("details").forEach((details) => {
+        details.addEventListener("toggle", function () {
+            const content = this.querySelector(".content");
+            if (this.open) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = 0;
+            }
+        });
+    });
 })(jQuery);
