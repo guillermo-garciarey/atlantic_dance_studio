@@ -5733,7 +5733,6 @@ ul.social li a:hover {
     margin-bottom: 10px;
     scroll-snap-type: x mandatory;
     width: 100%;
-    justify-content: center;
 }
 
 .event_container::-webkit-scrollbar {
