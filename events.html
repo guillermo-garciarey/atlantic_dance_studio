@@ -81,8 +81,8 @@
 
                     <!-- Content -->
                     <div id="Upcoming_Events">
-                        <header class="major special"></header>
-                        <h2>Upcoming Events</h2>
+                        <!-- <header class="major special"></header> -->
+
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Voluptate inventore placeat quas architecto
@@ -95,10 +95,23 @@
                         <div class="event_wrapper">
                             <div class="event_container">
                                 <div class="events">
-                                    <h4>World Finals</h4>
+                                    <div class="event_title">
+                                        <h4>World Finals</h4>
+                                    </div>
                                     <div class="event_card">
-                                        <h3>Jul</h3>
-                                        <p>17<span class="ordinal">th</span></p>
+                                        <div class="event_header">
+                                            <h3>
+                                                Jul 17<span class="ordinal"
+                                                    >th</span
+                                                >
+                                            </h3>
+                                        </div>
+                                        <div class="event_photo">
+                                            <img
+                                                src="https://images.pexels.com/photos/1585325/pexels-photo-1585325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                alt=""
+                                            />
+                                        </div>
 
                                         <button
                                             class="eventbutton fa-solid fa-info"
@@ -106,10 +119,23 @@
                                     </div>
                                 </div>
                                 <div class="events">
-                                    <h4>Christmas Show</h4>
+                                    <div class="event_title">
+                                        <h4>Christmas Show</h4>
+                                    </div>
                                     <div class="event_card">
-                                        <h3>Jul</h3>
-                                        <p>17<span class="ordinal">th</span></p>
+                                        <div class="event_header">
+                                            <h3>
+                                                Dec 25<span class="ordinal"
+                                                    >th</span
+                                                >
+                                            </h3>
+                                        </div>
+                                        <div class="event_photo">
+                                            <img
+                                                src="https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                alt=""
+                                            />
+                                        </div>
 
                                         <button
                                             class="eventbutton fa-solid fa-info"
@@ -117,21 +143,48 @@
                                     </div>
                                 </div>
                                 <div class="events">
-                                    <h4>Tango Qualifier</h4>
+                                    <div class="event_title">
+                                        <h4>Carnaval</h4>
+                                    </div>
+
                                     <div class="event_card">
-                                        <h3>Jul</h3>
-                                        <p>17<span class="ordinal">th</span></p>
+                                        <div class="event_header">
+                                            <h3>
+                                                March 1<span class="ordinal"
+                                                    >st</span
+                                                >
+                                            </h3>
+                                        </div>
+                                        <div class="event_photo">
+                                            <img
+                                                src="https://images.pexels.com/photos/8404685/pexels-photo-8404685.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                                alt=""
+                                            />
+                                        </div>
 
                                         <button
                                             class="eventbutton fa-solid fa-info"
                                         ></button>
                                     </div>
                                 </div>
-                                <div class="events">
-                                    <h4>Semi Finals</h4>
+                                <div class="events past_event">
+                                    <div class="event_title">
+                                        <h4>Summer Show</h4>
+                                    </div>
                                     <div class="event_card">
-                                        <h3>Jul</h3>
-                                        <p>17<span class="ordinal">th</span></p>
+                                        <div class="event_header">
+                                            <h3>
+                                                Aug 2<span class="ordinal"
+                                                    >nd</span
+                                                >
+                                            </h3>
+                                        </div>
+                                        <div class="event_photo">
+                                            <img
+                                                src="https://images.pexels.com/photos/13744252/pexels-photo-13744252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                alt=""
+                                            />
+                                        </div>
 
                                         <button
                                             class="eventbutton fa-solid fa-info"
@@ -139,22 +192,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="event_chevron_buttons">
+                                <button class="chevron chevron-left">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button class="chevron chevron-right">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Content -->
-                    <div id="Past_Events">
-                        <header class="major special"></header>
-                        <h2>Past Events</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Voluptate inventore placeat quas architecto
-                            laudantium fugiat sint consectetur voluptas delectus
-                            veniam, tempora, nemo sed sequi a illo?
-                            Necessitatibus, voluptates maiores praesentium aut
-                            eos nostrum sit magni quod, culpa optio mollitia
-                            sunt.
-                        </p>
                     </div>
                 </div>
             </section>
@@ -226,5 +272,60 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const container = document.querySelector(".event_container");
+                const leftButton = document.querySelector(".chevron-left");
+                const rightButton = document.querySelector(".chevron-right");
+
+                // Function to update button states
+                const updateButtonStates = () => {
+                    // Disable left button if scrolled all the way to the left
+                    if (container.scrollLeft <= 0) {
+                        leftButton.disabled = true;
+                        leftButton.classList.add("disabled");
+                    } else {
+                        leftButton.disabled = false;
+                        leftButton.classList.remove("disabled");
+                    }
+
+                    // Disable right button if scrolled all the way to the right
+                    if (
+                        container.scrollLeft + container.clientWidth >=
+                        container.scrollWidth
+                    ) {
+                        rightButton.disabled = true;
+                        rightButton.classList.add("disabled");
+                    } else {
+                        rightButton.disabled = false;
+                        rightButton.classList.remove("disabled");
+                    }
+                };
+
+                // Scroll the container and update button states
+                const scrollContainer = (direction) => {
+                    const scrollAmount = 175; // Adjust this value for how far the container scrolls
+                    container.scrollBy({
+                        left:
+                            direction === "right"
+                                ? scrollAmount
+                                : -scrollAmount,
+                        behavior: "smooth",
+                    });
+                };
+
+                // Add event listeners to the buttons
+                leftButton.addEventListener("click", () =>
+                    scrollContainer("left")
+                );
+                rightButton.addEventListener("click", () =>
+                    scrollContainer("right")
+                );
+
+                // Update button states initially and on scroll
+                container.addEventListener("scroll", updateButtonStates);
+                updateButtonStates(); // Initial state update
+            });
+        </script>
     </body>
 </html>
