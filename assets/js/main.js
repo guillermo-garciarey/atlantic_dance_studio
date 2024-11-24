@@ -373,6 +373,7 @@
             .setAttribute("aria-hidden", false);
     }
 });
+})(jQuery);
 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".event_container");
@@ -455,4 +456,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-})(jQuery);
+
