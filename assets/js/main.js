@@ -419,32 +419,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update button states initially and on scroll
     container.addEventListener("scroll", updateButtonStates);
     updateButtonStates(); // Initial state update
-});
+})(jQuery);
 
 //Popup Event Box
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Get all buttons with IDs starting with "popup"
-    const buttons = document.querySelectorAll("button[id^='popup']");
-
-    buttons.forEach((button) => {
-        // Get the corresponding popup based on button ID
-        const popupId = `${button.id}-content`;
-        const popup = document.getElementById(popupId);
-
-        if (popup) {
-            // Add event listener to open popup
-            button.addEventListener("click", () => {
-                popup.classList.add("visible");
-            });
-
-            // Add event listener to close popup
-            const closeButton = popup.querySelector(".close-popup");
-            closeButton.addEventListener("click", () => {
-                popup.classList.remove("visible");
-            });
-        } else {
-            console.error(`Popup with ID "${popupId}" not found.`);
-        }
-    });
-})(jQuery);

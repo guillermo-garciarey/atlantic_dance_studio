@@ -2170,6 +2170,7 @@ button:focus,
 .button:hover,
 .button:focus {
     background-color: rgba(99, 116, 133, 0.075);
+    /* background-color: white; */
 }
 
 input[type="submit"]:active,
@@ -2178,6 +2179,7 @@ input[type="button"]:active,
 button:active,
 .button:active {
     background-color: rgba(99, 116, 133, 0.175);
+    /* background-color: white; */
 }
 
 input[type="submit"].icon:before,
@@ -5733,6 +5735,7 @@ ul.social li a:hover {
     margin-bottom: 10px;
     scroll-snap-type: x mandatory;
     width: 100%;
+    justify-content: space-between;
 }
 
 .event_container::-webkit-scrollbar {
@@ -5849,6 +5852,11 @@ ul.social li a:hover {
     background-color: whitesmoke;
 }
 
+.eventbutton:focus {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    background-color: whitesmoke;
+}
+
 .eventbutton .fa {
     display: flex; /* Ensures it takes up space as a block */
     line-height: 1; /* Prevent extra spacing */
@@ -5877,85 +5885,4 @@ ul.social li a:hover {
     color: darkgrey; /* Optional: Different color */
 }
 
-/* Popup styling */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: height 0.5s ease;
-    z-index: 1000;
-    opacity: 0; /* Initially invisible */
-}
-
-.popup.visible {
-    height: 100%;
-    opacity: 1;
-    transition: height 1s ease, opacity 1s ease;
-}
-
-.popup-content {
-    overflow-y: auto;
-    max-height: 70%;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    max-width: 600px;
-    width: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    align-items: center;
-}
-
-/* Custom scrollbar for WebKit browsers */
-.popup-content::-webkit-scrollbar {
-    width: 6px; /* Thin scrollbar width */
-    background: transparent; /* No background for the scrollbar track */
-}
-
-.popup-content::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.5); /* Color of the scroll thumb */
-    border-radius: 3px; /* Rounded corners for the scroll thumb */
-}
-
-.popup-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.8); /* Darker color on hover */
-}
-
-.popup-content::-webkit-scrollbar-button {
-    display: none; /* Remove up/down arrow buttons */
-}
-
-/* For Firefox */
-.popup-content {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Thumb and track colors */
-}
-
-.popup-content h2 {
-    margin-bottom: 25px;
-}
-
-.popup-content p {
-    margin-bottom: 20px;
-}
-
-.close-popup {
-    display: flex;
-    background: white;
-    color: var(--background-900);
-    border: solid var(--background-900) 1px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
+/* Popup */
