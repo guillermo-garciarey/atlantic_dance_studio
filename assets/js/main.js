@@ -302,7 +302,7 @@
         titleSelector: "h3",
         delay: 250,
     });
-})(jQuery);
+
 
     // Accordion
 
@@ -458,3 +458,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+})(jQuery);
