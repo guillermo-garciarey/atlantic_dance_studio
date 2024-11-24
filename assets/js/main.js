@@ -374,11 +374,11 @@
     }
 });
 
-// Function to update button states
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".event_container");
     const leftButton = document.querySelector(".chevron-left");
     const rightButton = document.querySelector(".chevron-right");
+
     const updateButtonStates = () => {
         // Disable left button if scrolled all the way to the left
         if (container.scrollLeft <= 0) {
@@ -403,7 +403,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Scroll the container and update button states
-
     const scrollContainer = (direction) => {
         const scrollAmount = 140; // Adjust this value for how far the container scrolls
         container.scrollBy({
@@ -418,7 +417,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update button states initially and on scroll
     container.addEventListener("scroll", updateButtonStates);
-    updateButtonStates(); // Initial state update
+    window.addEventListener("resize", updateButtonStates); // Update on resize
+
+    updateButtonStates(); // Initial state update when the page loads
 });
 
 // Popup

@@ -5734,7 +5734,7 @@ ul.social li a:hover {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     margin-bottom: 10px;
     scroll-snap-type: x mandatory;
-    width: 100%;
+
     justify-content: space-between;
 }
 
