@@ -303,6 +303,92 @@
         delay: 250,
     });
 
+    /// EVENTS
+
+    /// Chevron
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".event_container");
+        const leftButton = document.querySelector(".chevron-left");
+        const rightButton = document.querySelector(".chevron-right");
+
+        const updateButtonStates = () => {
+            // Disable left button if scrolled all the way to the left
+            if (container.scrollLeft <= 0) {
+                leftButton.disabled = true;
+                leftButton.classList.add("disabled");
+            } else {
+                leftButton.disabled = false;
+                leftButton.classList.remove("disabled");
+            }
+
+            // Disable right button if scrolled all the way to the right
+            if (
+                container.scrollLeft + container.clientWidth >=
+                container.scrollWidth
+            ) {
+                rightButton.disabled = true;
+                rightButton.classList.add("disabled");
+            } else {
+                rightButton.disabled = false;
+                rightButton.classList.remove("disabled");
+            }
+        };
+
+        // Scroll the container and update button states
+        const scrollContainer = (direction) => {
+            const scrollAmount = 140; // Adjust this value for how far the container scrolls
+            container.scrollBy({
+                left: direction === "right" ? scrollAmount : -scrollAmount,
+                behavior: "smooth",
+            });
+        };
+
+        // Add event listeners to the buttons
+        leftButton.addEventListener("click", () => scrollContainer("left"));
+        rightButton.addEventListener("click", () => scrollContainer("right"));
+
+        // Update button states initially and on scroll
+        container.addEventListener("scroll", updateButtonStates);
+        window.addEventListener("resize", updateButtonStates); // Update on resize
+
+        updateButtonStates(); // Initial state update when the page loads
+    });
+
+    // Popup
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all the event buttons and all the popup containers
+        const eventButtons = document.querySelectorAll(".eventbutton");
+        const popups = document.querySelectorAll(".popup_container");
+
+        // Loop over all event buttons
+        eventButtons.forEach((button) => {
+            // Add an event listener to each event button
+            button.addEventListener("click", function () {
+                // Get the corresponding popup by using the button's id
+                const popupId = button.id.replace("popup", "popup_container");
+                const popup = document.getElementById(popupId);
+
+                // Toggle the 'active' class on the corresponding popup
+                popup.classList.toggle("active");
+            });
+        });
+
+        // Close the popup if clicking outside the popup card or event button
+        document.body.addEventListener("click", function (event) {
+            popups.forEach((popup) => {
+                const popupCard = popup.querySelector(".popup_card");
+
+                // If clicked outside both the popup card and the event button, close the popup
+                if (
+                    !popupCard.contains(event.target) && // Clicked outside the popup card
+                    !event.target.matches(".eventbutton") // Clicked outside the event button
+                ) {
+                    popup.classList.remove("active");
+                }
+            });
+        });
+    });
 
     // Accordion
 
@@ -373,89 +459,4 @@
             .querySelector(".accordion-content_euro")
             .setAttribute("aria-hidden", false);
     }
-})(jQuery);
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".event_container");
-    const leftButton = document.querySelector(".chevron-left");
-    const rightButton = document.querySelector(".chevron-right");
-
-    const updateButtonStates = () => {
-        // Disable left button if scrolled all the way to the left
-        if (container.scrollLeft <= 0) {
-            leftButton.disabled = true;
-            leftButton.classList.add("disabled");
-        } else {
-            leftButton.disabled = false;
-            leftButton.classList.remove("disabled");
-        }
-
-        // Disable right button if scrolled all the way to the right
-        if (
-            container.scrollLeft + container.clientWidth >=
-            container.scrollWidth
-        ) {
-            rightButton.disabled = true;
-            rightButton.classList.add("disabled");
-        } else {
-            rightButton.disabled = false;
-            rightButton.classList.remove("disabled");
-        }
-    };
-
-    // Scroll the container and update button states
-    const scrollContainer = (direction) => {
-        const scrollAmount = 140; // Adjust this value for how far the container scrolls
-        container.scrollBy({
-            left: direction === "right" ? scrollAmount : -scrollAmount,
-            behavior: "smooth",
-        });
-    };
-
-    // Add event listeners to the buttons
-    leftButton.addEventListener("click", () => scrollContainer("left"));
-    rightButton.addEventListener("click", () => scrollContainer("right"));
-
-    // Update button states initially and on scroll
-    container.addEventListener("scroll", updateButtonStates);
-    window.addEventListener("resize", updateButtonStates); // Update on resize
-
-    updateButtonStates(); // Initial state update when the page loads
-});
-
-// Popup
-document.addEventListener("DOMContentLoaded", function () {
-    // Select all the event buttons and all the popup containers
-    const eventButtons = document.querySelectorAll(".eventbutton");
-    const popups = document.querySelectorAll(".popup_container");
-
-    // Loop over all event buttons
-    eventButtons.forEach((button) => {
-        // Add an event listener to each event button
-        button.addEventListener("click", function () {
-            // Get the corresponding popup by using the button's id
-            const popupId = button.id.replace("popup", "popup_container");
-            const popup = document.getElementById(popupId);
-
-            // Toggle the 'active' class on the corresponding popup
-            popup.classList.toggle("active");
-        });
-    });
-
-    // Close the popup if clicking outside the popup card or event button
-    document.body.addEventListener("click", function (event) {
-        popups.forEach((popup) => {
-            const popupCard = popup.querySelector(".popup_card");
-
-            // If clicked outside both the popup card and the event button, close the popup
-            if (
-                !popupCard.contains(event.target) && // Clicked outside the popup card
-                !event.target.matches(".eventbutton") // Clicked outside the event button
-            ) {
-                popup.classList.remove("active");
-            }
-        });
-    });
-
 })(jQuery);
