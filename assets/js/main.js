@@ -419,6 +419,39 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update button states initially and on scroll
     container.addEventListener("scroll", updateButtonStates);
     updateButtonStates(); // Initial state update
-})(jQuery);
+});
 
-//Popup Event Box
+// Popup
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all the event buttons and all the popup containers
+    const eventButtons = document.querySelectorAll(".eventbutton");
+    const popups = document.querySelectorAll(".popup_container");
+
+    // Loop over all event buttons
+    eventButtons.forEach((button) => {
+        // Add an event listener to each event button
+        button.addEventListener("click", function () {
+            // Get the corresponding popup by using the button's id
+            const popupId = button.id.replace("popup", "popup_container");
+            const popup = document.getElementById(popupId);
+
+            // Toggle the 'active' class on the corresponding popup
+            popup.classList.toggle("active");
+        });
+    });
+
+    // Close the popup if clicking outside the popup card or event button
+    document.body.addEventListener("click", function (event) {
+        popups.forEach((popup) => {
+            const popupCard = popup.querySelector(".popup_card");
+
+            // If clicked outside both the popup card and the event button, close the popup
+            if (
+                !popupCard.contains(event.target) && // Clicked outside the popup card
+                !event.target.matches(".eventbutton") // Clicked outside the event button
+            ) {
+                popup.classList.remove("active");
+            }
+        });
+    });
+})(jQuery);

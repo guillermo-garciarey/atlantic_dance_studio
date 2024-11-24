@@ -5886,3 +5886,116 @@ ul.social li a:hover {
 }
 
 /* Popup */
+
+.popup_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #28282850;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+}
+
+.popup_container.active {
+    opacity: 1;
+    z-index: 9999;
+}
+
+.popup_card {
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    max-height: 75%;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    opacity: 1;
+}
+
+.popup_card h2 {
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.popup_card p {
+    color: #282828;
+}
+
+.date_location {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .date_location {
+        flex-direction: column;
+    }
+}
+
+.date,
+.location {
+    width: 100%; /* Optional: set a width to control the layout */
+}
+
+.date dl,
+.location dl {
+    text-align: center; /* Center the text inside the dl */
+}
+
+/* Centers the content inside the dd element */
+.date dd,
+.location dd {
+    text-align: center;
+    margin: 0 !important;
+}
+
+.popup_button {
+    display: flex;
+    border-radius: 5px;
+    background-color: transparent !important;
+    border: none;
+    color: var(--primary-500) !important;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition: transform 3s ease;
+}
+
+.popup_button:hover {
+    transform: scale(1.05);
+}
+
+/* Styling the scrollbar */
+.popup_card::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Styling the scrollbar thumb (the draggable part) */
+.popup_card::-webkit-scrollbar-thumb {
+    background-color: darkgray; /* Set the color of the scrollbar thumb */
+    border-radius: 10px; /* Round the edges of the thumb */
+    border: 2px solid #fff; /* Optional: adds a border around the thumb to create a contrast */
+}
+
+/* Styling the scrollbar track (background area) */
+.popup_card::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Set the track color */
+    border-radius: 10px; /* Optional: round the track's corners */
+}
