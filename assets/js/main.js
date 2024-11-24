@@ -372,6 +372,79 @@
             .querySelector(".accordion-content_euro")
             .setAttribute("aria-hidden", false);
     }
+});
 
-    // Event Scrolling Buttons
+// Function to update button states
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".event_container");
+    const leftButton = document.querySelector(".chevron-left");
+    const rightButton = document.querySelector(".chevron-right");
+    const updateButtonStates = () => {
+        // Disable left button if scrolled all the way to the left
+        if (container.scrollLeft <= 0) {
+            leftButton.disabled = true;
+            leftButton.classList.add("disabled");
+        } else {
+            leftButton.disabled = false;
+            leftButton.classList.remove("disabled");
+        }
+
+        // Disable right button if scrolled all the way to the right
+        if (
+            container.scrollLeft + container.clientWidth >=
+            container.scrollWidth
+        ) {
+            rightButton.disabled = true;
+            rightButton.classList.add("disabled");
+        } else {
+            rightButton.disabled = false;
+            rightButton.classList.remove("disabled");
+        }
+    };
+
+    // Scroll the container and update button states
+
+    const scrollContainer = (direction) => {
+        const scrollAmount = 140; // Adjust this value for how far the container scrolls
+        container.scrollBy({
+            left: direction === "right" ? scrollAmount : -scrollAmount,
+            behavior: "smooth",
+        });
+    };
+
+    // Add event listeners to the buttons
+    leftButton.addEventListener("click", () => scrollContainer("left"));
+    rightButton.addEventListener("click", () => scrollContainer("right"));
+
+    // Update button states initially and on scroll
+    container.addEventListener("scroll", updateButtonStates);
+    updateButtonStates(); // Initial state update
+});
+
+//Popup Event Box
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all buttons with IDs starting with "popup"
+    const buttons = document.querySelectorAll("button[id^='popup']");
+
+    buttons.forEach((button) => {
+        // Get the corresponding popup based on button ID
+        const popupId = `${button.id}-content`;
+        const popup = document.getElementById(popupId);
+
+        if (popup) {
+            // Add event listener to open popup
+            button.addEventListener("click", () => {
+                popup.classList.add("visible");
+            });
+
+            // Add event listener to close popup
+            const closeButton = popup.querySelector(".close-popup");
+            closeButton.addEventListener("click", () => {
+                popup.classList.remove("visible");
+            });
+        } else {
+            console.error(`Popup with ID "${popupId}" not found.`);
+        }
+    });
 })(jQuery);

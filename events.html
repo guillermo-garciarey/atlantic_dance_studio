@@ -114,8 +114,50 @@
                                         </div>
 
                                         <button
+                                            id="popup1"
                                             class="eventbutton fa-solid fa-info"
                                         ></button>
+                                    </div>
+                                </div>
+                                <div class="popup" id="popup1-content">
+                                    <div class="popup-content">
+                                        <h2>World Finals Information</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Consectetur possimus eligendi
+                                            numquam, sapiente incidunt
+                                            necessitatibus enim itaque commodi
+                                            officia ea debitis harum optio hic
+                                            aliquam consequatur maiores iure?
+                                            Eos voluptatum distinctio
+                                            voluptatibus nesciunt tempore ex aut
+                                            facere? Quae dolorum autem
+                                            accusamus, tempore beatae explicabo
+                                            ex quod voluptatum nesciunt
+                                            excepturi! Magnam.
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Id
+                                            voluptatum harum rem vero
+                                            consequuntur animi, error omnis
+                                            sapiente, neque deserunt repudiandae
+                                            dicta tempore quod ad quos dolor
+                                            vitae? Accusamus ipsam enim
+                                            similique, voluptatem velit quos
+                                            molestias aspernatur voluptatibus
+                                            exercitationem provident non
+                                            voluptates assumenda fuga, quam eius
+                                            possimus ut culpa laborum natus.
+                                            Itaque nobis soluta similique saepe
+                                            esse hic quae praesentium
+                                            dignissimos doloribus id, dolore
+                                            eius at ipsa.
+                                        </p>
+                                        <button class="close-popup">
+                                            Close
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="events">
@@ -272,60 +314,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const container = document.querySelector(".event_container");
-                const leftButton = document.querySelector(".chevron-left");
-                const rightButton = document.querySelector(".chevron-right");
-
-                // Function to update button states
-                const updateButtonStates = () => {
-                    // Disable left button if scrolled all the way to the left
-                    if (container.scrollLeft <= 0) {
-                        leftButton.disabled = true;
-                        leftButton.classList.add("disabled");
-                    } else {
-                        leftButton.disabled = false;
-                        leftButton.classList.remove("disabled");
-                    }
-
-                    // Disable right button if scrolled all the way to the right
-                    if (
-                        container.scrollLeft + container.clientWidth >=
-                        container.scrollWidth
-                    ) {
-                        rightButton.disabled = true;
-                        rightButton.classList.add("disabled");
-                    } else {
-                        rightButton.disabled = false;
-                        rightButton.classList.remove("disabled");
-                    }
-                };
-
-                // Scroll the container and update button states
-                const scrollContainer = (direction) => {
-                    const scrollAmount = 140; // Adjust this value for how far the container scrolls
-                    container.scrollBy({
-                        left:
-                            direction === "right"
-                                ? scrollAmount
-                                : -scrollAmount,
-                        behavior: "smooth",
-                    });
-                };
-
-                // Add event listeners to the buttons
-                leftButton.addEventListener("click", () =>
-                    scrollContainer("left")
-                );
-                rightButton.addEventListener("click", () =>
-                    scrollContainer("right")
-                );
-
-                // Update button states initially and on scroll
-                container.addEventListener("scroll", updateButtonStates);
-                updateButtonStates(); // Initial state update
-            });
-        </script>
+        <script></script>
     </body>
 </html>
